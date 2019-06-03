@@ -49,7 +49,39 @@
     <main role="main" class="flex-shrink-0">
         <div class="container">
             <h1 class="mt-5">Recursion in SPARQL</h1>
-            <p class="lead">In this paper you will find all the resources of the paper <b>Recursion in SPARQL</b>, including the source code, queries, datasets, an executable <code>.jar</code> and the instructions to run it.</p>
+            <p>In this page you will find all the resources of the paper <b>Recursion in SPARQL</b>, including the source code, queries, datasets and the instructions to run it. You can find the source code of the implementation of Recursive SPARQL <a href="https://github.com/alanezz/RecSPARQL/tree/master/source_code">here</a>.</p>
+            <p>You can import the source code using <code>Maven</code>. Then you should take a look to the following files:</p>
+            <ul>
+                <li>
+                    <a href="https://github.com/alanezz/RecSPARQL/blob/master/source_code/jena-arq/src-examples/arq/examples/LoadTDB.java">LoadTDB.java</a>: the procedure to load a RDF file to Jena TDB.
+                </li>
+                <li>
+                    <a href="https://github.com/alanezz/RecSPARQL/blob/master/source_code/jena-arq/src-examples/arq/examples/ExecRecursive.java">ExecRecursive.java</a>: the procedure to execute Recursive Queries. Also it has some global variables:
+                    <ul>
+                        <li>
+                            <code>RECURSIVE_TDB_DIR</code>: a TDB Folder that is used to store partial results when computing a Recursive Query.
+                        </li>
+                        <li>
+                            <code>TDB_DIR</code>: a TDB Folder where the dataset is stored.
+                        </li>
+                        <li>
+                            <code>RECURSIVE_METHODS</code> and <code>RECURSIVE_METHOD</code>: the possible options to run the algorithm (disk, in memory, limiting iterations,...) and the choice of the user.
+                        </li>
+                        <li>
+                            <code>NUMBER_OF_ITERATIONS</code>: in case of limiting the number of iterations, this number will represent the number of iterations.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://github.com/alanezz/RecSPARQL/blob/master/source_code/jena-arq/src-examples/arq/examples/ExecRecursiveJSON.java">ExecRecursiveJSON.java</a>: the procedure to execute recursive queries from a JSON file. See the queries tab to find the JSON documents for Yago and LMDB.
+                </li>
+                <li>
+                    <a href="https://github.com/alanezz/RecSPARQL/blob/master/source_code/jena-arq/src-examples/arq/examples/ExecRecursiveJSON.java">ExecRecursiveJSON.java</a>: the procedure to execute recursive queries from a JSON file, but limiting the number of iterations.
+                </li>
+                <li>
+                    <a href="https://github.com/alanezz/RecSPARQL/blob/master/source_code/jena-arq/src-examples/arq/examples/ExecGMarkFile.java">ExecGMarkFile.java</a>: the procedure to execute the queries of the GMark Benchmark.
+                </li>
+            </ul>
         </div>
     </main>
 
